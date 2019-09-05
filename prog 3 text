@@ -1,0 +1,31 @@
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var var1 = setInterval(inTimer, 50);
+var size = 5;
+var display = document.getElementById("demo");
+function inTimer() {
+display.innerHTML = 'TEXT GROWING50pt';
+display.setAttribute('style', "font-size: " + size + "px; color: red");
+size += 5;
+if(size >= 50 ){
+clearInterval(var1);
+var2 = setInterval(deTimer, 50);
+}
+}
+function deTimer() {
+size -= 5;
+display.innerHTML = 'TEXT SHRINKING5';
+display.setAttribute('style', "font-size: " + size + "px; color: blue");
+if(size == 5 ){
+clearInterval(var2);
+}
+}
+</script>
+<body style="background-color:pink" onload="start()">
+<center>
+<p style="margin-middle:250px"id="display"></p>
+</center>
+</body>
+</html>
